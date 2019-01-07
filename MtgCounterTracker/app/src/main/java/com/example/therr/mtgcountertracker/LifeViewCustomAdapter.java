@@ -72,4 +72,8 @@ public class LifeViewCustomAdapter extends ArrayAdapter<Player> implements View.
         holder.btnDec.setTag(position);
         return convertView;
     }
+
+    public void UpdatePlayerList(){
+        this.notifyDataSetChanged();
+    }
 }

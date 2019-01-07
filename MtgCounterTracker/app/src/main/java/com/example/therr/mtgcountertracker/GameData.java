@@ -18,4 +18,12 @@ public  class GameData {
             playerList.add(new Player(("Player "+a)));
         }
     }
+
+    public static void AddPlayer() {
+         playerList.add(new Player("Player "+playerList.size()));
+    }
+
+    public static void RemoveLastPlayer() {
+        playerList.remove(playerList.size()-1);
+    }
 }
