@@ -6,29 +6,30 @@
     android:background="@color/colorPrimary">
 
     <Button
-        android:id="@+id/btnDecLife"
+        android:id="@+id/btnDecDmg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:text="-" />
     <TextView
-        android:id="@+id/txtName"
+        android:id="@+id/txtCmdr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_toEndOf="@id/btnDecLife"
+        android:layout_toEndOf="@id/btnDecDmg"
+        android:text="Commander "
         />
     <TextView
-        android:id="@+id/txtLife"
+        android:id="@+id/txtDmg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_toEndOf="@id/txtName"
-        android:text="Life: "
+        android:text="Damage: 0 "
         />
 
     <Button
-        android:id="@+id/btnIncLife"
+        android:id="@+id/btnIncDmg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"

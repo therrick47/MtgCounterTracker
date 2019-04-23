@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:id="@+id/menuRemove"
-        android:icon="@drawable/ic_remove_black_24dp"
-        app:showAsAction="ifRoom"
-        android:title="Remove Player"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_alignParentEnd="true">
+    <item
+        android:id="@+id/menuRemove"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
         android:layout_gravity="end"
-        android:onClick="RemovePlayerClicked"/>
-<item android:id="@+id/menuAdd"
-    android:icon="@drawable/ic_add_black_24dp"
-    app:showAsAction="ifRoom"
-    android:title="Add Player"
-    android:layout_gravity="end"
-    android:onClick="AddPlayerClicked"/>
+        android:icon="@drawable/ic_remove_black_24dp"
+        android:onClick="RemovePlayerClicked"
+        android:title="Remove Player"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menuAdd"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="end"
+        android:icon="@drawable/ic_add_black_24dp"
+        android:onClick="AddPlayerClicked"
+        android:title="Add Player"
+        app:showAsAction="ifRoom" />
 </menu>

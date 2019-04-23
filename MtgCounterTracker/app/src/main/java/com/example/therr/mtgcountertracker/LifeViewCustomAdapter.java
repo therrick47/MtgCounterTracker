@@ -5,10 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -22,12 +18,7 @@ public class LifeViewCustomAdapter extends ArrayAdapter<Player> implements View.
         players = playerArrayList;
     }
 
-    private static class ViewHolder {
-        TextView playerLife;
-        TextView playerName;
-        Button btnDec;
-        Button btnInc;
-    }
+
 
     @Override
     public void onClick(View view) {
@@ -49,10 +40,10 @@ public class LifeViewCustomAdapter extends ArrayAdapter<Player> implements View.
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
         Player player = getItem(position);
-        ViewHolder holder;
+        LifePanelHolders.LifePanelViewHolder holder;
 
         if (convertView == null) {
-            holder = new ViewHolder();
+            holder = new LifePanelHolders.LifePanelViewHolder();
             LayoutInflater inflater = LayoutInflater.from(getContext());
             convertView = inflater.inflate(R.layout.life_total_list_item, parent, false);
             holder.playerLife = convertView.findViewById(R.id.txtLife);
@@ -61,7 +52,7 @@ public class LifeViewCustomAdapter extends ArrayAdapter<Player> implements View.
             holder.btnInc = convertView.findViewById(R.id.btnIncrease);
             convertView.setTag(holder);
         } else {
-            holder = (ViewHolder) convertView.getTag();
+            holder = (LifePanelHolders.LifePanelViewHolder) convertView.getTag();
         }
 
         holder.playerLife.setText("Life: "+player.GetLifeAsString());
